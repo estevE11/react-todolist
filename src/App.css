@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+body {
+  background-color: #221122;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h2 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todolist {
+  margin: 50px;
+  width: 500px;
+  border-radius: 6px;
+  padding: 10px;
+  padding-top: 1px;
+  background-color: rgba(20, 10, 20);
+  box-shadow: 0px 5px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #332233;
+  color: white;
+  width: 98%;
+  border-radius: 5px;
+  font-size: 24px;
+  box-shadow: 0px 2px black;
+}
+
+.textIpt {
+  background-color: #332233;
+  color: white;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 20px;
+  padding-left: 5px !important;
+  width: 380px;
+  height: 30px;
+  box-shadow: 0px 2px black;
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box; 
+}
+
+.textIpt:focus, .btn:focus {
+  outline: none;
+}
+
+.btn {
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 2px black;
+
+  position: relative;
+  top: 1px;
+
+  border-radius: 0px 5px 5px 0px;
+
+  background-color: #332233;
+  color: #aaaaaa;
+}
+
+.btn:hover {
+  color: #ffffff;
 }
