@@ -27,7 +27,7 @@ h2 {
   box-shadow: 0px 2px black;
 }
 
-.textIpt {
+.ipt {
   background-color: #332233;
   color: white;
   border: none;
@@ -43,8 +43,14 @@ h2 {
   box-sizing: border-box; 
 }
 
-.textIpt:focus, .btn:focus {
+.ipt:focus, .btn:focus {
   outline: none;
+}
+
+.searchIpt {
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 5px;
 }
 
 .btn {
