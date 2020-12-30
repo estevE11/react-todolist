@@ -23,10 +23,6 @@ export class ToDoList extends React.Component<{}, State> {
         searchVal: '',
     };
 
-    constructor(props : any) {
-        super(props);
-    }
-
     componentDidMount = () => {
         let meh = localStorage.getItem('items');
         let itemsFromStorage: IItem[] = meh ? JSON.parse(meh) : null;
