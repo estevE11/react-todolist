@@ -7,11 +7,6 @@ interface IItem {
     checked: boolean
 }
 
-interface State {
-    items: IItem[],
-    checked: boolean
-}
-
 export class ToDoList extends React.Component {
     state = {
         items: [],
@@ -31,7 +26,7 @@ export class ToDoList extends React.Component {
 
     addItem = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        if(this.state.inputVal == '') return;
+        if(this.state.inputVal === '') return;
         let arr: IItem[] = this.state.items;
         arr.push({name: this.state.inputVal, checked: false});
         this.setState({items: arr}, this.listUpdated);
@@ -55,6 +50,7 @@ export class ToDoList extends React.Component {
         this.state.items.map((item: IItem) => {
             if(item.checked) done.push(item);
             else todo.push(item);
+            return item;
         });
         todo.push(...done);
         this.setState({items: todo});
@@ -66,9 +62,9 @@ export class ToDoList extends React.Component {
             <div className="todolist">
                 <h2>ToDo List</h2>
                 <div className="todolist-list">
-                    {this.state.items.map((item: any, idx: number) =>
-                        <Item id={idx+1} name={item.name} checked={item.checked} cbClick={val => {this.updateCheckItem(idx, val)}}/>
-                    )}
+                    {this.state.items.map((item: any, idx: number) => {
+                        return <Item id={idx+1} name={item.name} checked={item.checked} cbClick={val => {this.updateCheckItem(idx, val)}}/>;
+                    })}
                 </div>
                 <form>
                     <input className="textIpt" placeholder="New item..." type="text" value={this.state.inputVal} onChange={e =>this.setInputVal(e.target.value)}/>

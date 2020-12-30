@@ -8,10 +8,6 @@ interface ItemProps {
 }
 
 export class Item extends React.Component<ItemProps> {
-    constructor(props : ItemProps) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="item">
