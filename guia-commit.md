@@ -71,7 +71,8 @@ En aquest cas el changelog nomes contindrà les seccions de `feat` i `fix`, els 
 
 Primer instalem `husky` que ens permetrà executar un script quan fem un commit:
 
-`npm install husky`
+`npm install husky@4.3.0`
+<sub>Important instalar la versió `4.3.0`, la ultima verisió no funciona gaire be.<sub>
 
 Despres instalem `commitlint` que es el que ens corregirà el commit:
 
