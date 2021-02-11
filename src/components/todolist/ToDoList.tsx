@@ -51,7 +51,7 @@ export class ToDoList extends React.Component<{}, State> {
 
     searchValUpdate = async (val: string) => {
         console.log('1Val: ', val)
-        await this.setState({searchVal: val});
+        this.setState({searchVal: val});
         console.log('2Val: ', this.state.searchVal)
         this.updateFilteredItems();
     }
