@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/mokkapps/changelog-generator-demo/compare/v0.2.4...v0.2.5) (2021-02-11)
+
+
+### Changes
+
+* fitle: Removed info and spam ([22dfd2c](https://github.com/mokkapps/changelog-generator-demo/commits/22dfd2c34419bb9ec79d9fbd649ad07c70cee90c))
+
 ### [0.2.4](https://github.com/mokkapps/changelog-generator-demo/compare/v0.2.3...v0.2.4) (2021-02-11)
 
 ### [0.2.3](https://github.com/mokkapps/changelog-generator-demo/compare/v0.2.2...v0.2.3) (2021-02-11)
