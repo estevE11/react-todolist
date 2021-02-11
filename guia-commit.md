@@ -20,6 +20,14 @@ Els scripts per executar son (package.json):
 
 Per generar la primera versió s'ha d'executar `npm run release -- --first-release`
 
+Per executar els changelogs seguents:
+
+0.0.X - `npm run release:patch`
+
+0.X.0 - `npm run release:minor`
+
+X.0.0 - `npm run release:major`
+
 ## Commits
 
 Per els missatges de commit s'haura de seguir el standard de ([Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/))
@@ -31,22 +39,22 @@ Basicament els commits han de seguir les seguents normes:
 3. Obligatoriament hi ha d'haver un missatge de commit despres de `:` i espai.
 4. Si es vol afegir un text amb mes informació sobre el commit, s'ha de fer deixant una linia en blanc entre aquest i el missatge principal.
 
-#### Tipus de commit
+### Tipus de commit
 
 Els mes utiltizats:
 
 - **FEAT**: Quan un commit afegeix una caracteristica nova a l'app.
 - **FIX**: Quan un commit arregla un bug.
+- **REFACTOR**: Quan un commit canvia algo sense ser algo nou ni un bugfix
 
 Altres opcions:
 
-- **REFACTOR**: Quan un commit canvia una caracteristica (no afegeix res ni arregla cap bug)
 - **PERF**: Quan un commit que millora la performance.
 - **DOCS**: Quan un commit fa algun canvi a la documentació.
 - **STYLE**: Quan un commit fa algun canvi nomes d'estil.
 - **TEST**: Quan un commit fa afegeix o canvia algun test.
 
-#### Configuració
+### Configuració
 
 L'aparició d'aquests en el changelog pot ser configurada amb l'arxiu `.versionrc.json`:
 
@@ -55,9 +63,9 @@ L'aparició d'aquests en el changelog pot ser configurada amb l'arxiu `.versionr
     "types": [
       {"type": "feat", "section": "Features"},
       {"type": "fix", "section": "Bug Fixes"},
+      {"type": "refactor", "section": "Changes", "hidden": false},
       {"type": "docs", "hidden": true},
       {"type": "style", "hidden": true},
-      {"type": "refactor", "hidden": true},
       {"type": "test", "hidden": true}
     ],
     "commitUrlFormat": "https://github.com/mokkapps/changelog-generator-demo/commits/{{hash}}",
@@ -92,7 +100,7 @@ Ara per executar el corrector cada cop que fem un commit, hem d'especificar al `
 
 Per acabar hem de crear l'arxiu `.commitlintrc.json` que extendrà de `config-conventional`:
 
-```
+```json
 {
   "extends": ["@commitlint/config-conventional"]
 }
