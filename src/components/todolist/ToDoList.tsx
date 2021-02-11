@@ -84,6 +84,7 @@ export class ToDoList extends React.Component<{}, State> {
         return(
             <div className="todolist">
                 <h2>ToDo List (by Roger Esteve)</h2>
+                <h4>First project with React and TypeScript</h4>
                 <form>
                     <input className="ipt searchIpt" placeholder="Search item..." type="text" value={this.state.searchVal} onChange={async e =>this.searchValUpdate(e.target.value)}/>
                 </form>
