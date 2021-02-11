@@ -1,6 +1,6 @@
 {
   "name": "free-poker-online",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": true,
   "dependencies": {
     "@commitlint/cli": "^11.0.0",
