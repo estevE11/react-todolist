@@ -22,7 +22,8 @@
         },
         {
             "type": "refactor",
-            "hidden": true
+            "section": "Changes",
+            "hidden": false
         },
         {
             "type": "perf",
